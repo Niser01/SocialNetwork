@@ -19,8 +19,12 @@ from django.urls import path
 from SocialNetwork.views import*
 
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Hola/', saludo),
     path('adios/', despedida),
+    path('hora/', Fecha),
+    path('edad/<int:annoact>/<int:annofut>/<int:edActual>', calcedad),
 ]
