@@ -1,5 +1,20 @@
 <html>
     <body>
         <h1>¡Hola bienvenidos a su red social!</h1>
+        <p>Bienvenido: {{nombre_persona}} {{apellido_persona}}</p>
+        <p>Tu &uacute;ltimo acceso fue el: {{last_login}}</p>
+        <p>Los temas sugeridos para hoy son: </p>
+        <p>
+            {% if temas.isempty %}
+                <p>No hay temas sugeridos en este momento</p>
+            {% else %}  
+                <ul>
+                    {% for i in temas %}
+                    <li>{{i}}</li>
+                    {% endfor %}
+                </ul> 
+            {% endif %}
+        </p>
+
     </body>
 </html>
